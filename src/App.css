@@ -1,38 +1,148 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: black;
+  color: white;
+  margin-inline: 2rem;
+}
+nav{
+  position: sticky;
+  top:0;
+}
+.navbar {
+  /* background: #333; */
+  color: white;
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+ 
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navbar-logo a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.navbar-logo a img{
+  margin-top: 10px;
+  width: 100px;
+  height: 50px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  margin-left:30rem;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+.navbar-item {
+  margin-left: 3.5rem;
+}
+
+.navbar-item a {
+  color: white;
+  text-decoration: none;
+  font-size:13px;
+}
+.Home{
+  margin-top: 5rem;
+}
+.vertical-line {
+  width: 1px;
+  background-color:burlywood;
+  margin-left:13rem;
+  margin-bottom: 5px;
+}
+hr {
+  border: 0;
+  height: 1px;
+  width: 100%;
+  background:burlywood;
+  margin-top: 5rem;
+}
+ .brand{
+  margin: 10px;
+ }
+ .products{
+  position: absolute;
+  left: 300px;
+  top:200px;
+  font-weight: 500;
+  font-weight: bold;
+ }
+ .btn{
+  position: relative;
+  margin-left:45rem;
+  bottom:20px;
+  border: 1px solid burlywood;
+  padding: 8px;
+ }
+ .cards{
+  position: absolute;
+  margin-top:20px;
+  top:15rem;
+  left:17rem;
+
+ }
+ .cards img{
+    height: 400px;
+    width:900px;
+    margin-block: 20px;
+ }
+ .footer1{
+  display: flex;
+  margin-top:35rem;
+ }
+ .social-icons{
+  display: flex;
+   margin-top: 20px;
+  gap:2rem;
+  margin-left: 25px;
+  font-size: 20px;
+  position: relative;
+  top: 7rem;
+  right:10rem;
+ }
+ .details{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+  gap: 30px;
+  margin-inline: 20px;
+ }
+ .conditions{
+  margin-left: 20rem;
+ }
+ .footer2{
+  display: flex;
+  gap:50px;
+  margin-top: 40px;
+ }
+ .footer2 img{
+  height: 70px;
+  width: 70px;
+ }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 768px) {
+  .navbar-menu {
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+
+  .navbar-icon {
+    display: block;
   }
 }

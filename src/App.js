@@ -12,11 +12,16 @@ import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons/faLinkedinIn';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 import { faPhone } from '@fortawesome/free-solid-svg-icons';
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
-
+import Home from './components/Home'
+import About from './components/About'
+import Services from './components/Services';
+import Contact from './components/Contact';
+import { Link } from 'react-router-dom';
+import { Router, Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
+      <div className="App">
      <nav className="navbar">
       <div className="navbar-container">
         <div className="navbar-logo">
@@ -24,16 +29,16 @@ function App() {
         </div>
         <ul className="navbar-menu">
           <li className="navbar-item">
-            <a href="/">Home</a>
+           <Link to='/'>Home</Link>
           </li>
           <li className="navbar-item">
-            <a href="/about">About</a>
+           <Link to='/About'>About</Link>
           </li>
           <li className="navbar-item">
-            <a href="/services">Services</a>
+          <Link to='/Services'>Services</Link>
           </li>
           <li className="navbar-item">
-            <a href="/contact">Contact</a>
+            <Link to="/Contact">Contact</Link>
           </li>
         </ul>
         <div className="navbar-icon">
@@ -80,7 +85,14 @@ function App() {
       <img src={logo} />
       <p>copyright &#169; 2024 GROOMER VOGUE AND BEAUTY PRIVATE LIMITED,All rights reserved</p>
     </div>
+    <Routes>
+      <Route path='/' element={<Home />} />
+      <Route path='/About' element={<About />} />
+      <Route path='/Services' element={<Services />} />
+      <Route path='/Contact' element={<Contact />} />
+    </Routes>
     </div>
+    
   );
 }
 
